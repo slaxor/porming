@@ -1,0 +1,250 @@
+@grid-columns:              12;
+@grid-gutter-width:         50px;
+@grid-float-breakpoint:     1024px;
+
+// Grays
+@gray-darker: #2e3837;
+@gray-dark: lighten(@gray-darker, 10%);
+@gray: lighten(@gray-darker, 30%);
+@gray-light: lighten(@gray-darker, 60%);
+@gray-lighter: lighten(@gray-darker, 70%);
+@black: @gray-darker;
+@white: #f0f4f3;
+
+// Brand Colors
+@brand-primary: #0072b5;
+@brand-success: #33a784;
+@brand-warning: #b58900;
+@brand-danger: #dc322f;
+@brand-info: #8433af;
+
+
+// Scaffolding
+@body-bg: @black;
+@text-color: @white;
+@link-color: @brand-primary;
+@link-hover-color: darken(@link-color, 15%);
+@padding-base-vertical: 3px;
+@padding-base-horizontal: 12px;
+@padding-large-vertical: 10px;
+@padding-large-horizontal: 16px;
+@padding-small-vertical: 2px;
+@padding-small-horizontal: 6px;
+@border-radius-base: 4px;
+@border-radius-large: 6px;
+@border-radius-small: 3px;
+@line-height-large: 1.33;
+@line-height-small: 1.5;
+@component-active-bg: @brand-primary;
+
+
+// Typography
+@font-family-sans-serif: "Optima";
+@font-family-serif: "Jenson";
+@font-family-monospace: Inconsolata;
+@font-family-base: @font-family-sans-serif;
+@font-size-base: 14px;
+@font-size-large: ceil(@font-size-base * 1.25);
+@font-size-small: ceil(@font-size-base * 0.85);
+@font-size-h1: floor((@font-size-base * 2.6));
+@font-size-h2: floor((@font-size-base * 2.15));
+@font-size-h3: floor((@font-size-base * 1.7));
+@font-size-h4: floor((@font-size-base * 1.25));
+@font-size-h5: @font-size-base;
+@font-size-h6: floor((@font-size-base * 0.85));
+@line-height-base: 1.428571429;
+@line-height-computed: floor(@font-size-base * @line-height-base);
+@headings-font-family: @font-family-base;
+@headings-font-weight: 500;
+@headings-line-height: 1.1;
+@headings-color: inherit;
+
+
+// Buttons
+@btn-font-weight: normal;
+@btn-default-color: @white;
+@btn-default-bg: @gray-dark;
+@btn-default-border: @gray-light;
+@btn-primary-color: @white;
+@btn-primary-bg: @brand-primary;
+@btn-primary-border: darken(@btn-primary-bg, 5%);
+@btn-success-color: @black;
+@btn-success-bg: @brand-success;
+@btn-success-border: darken(@btn-success-bg, 5%);
+@btn-warning-color: @black;
+@btn-warning-bg: @brand-warning;
+@btn-warning-border: darken(@btn-warning-bg, 5%);
+@btn-danger-color: @black;
+@btn-danger-bg: @brand-danger;
+@btn-danger-border: darken(@btn-danger-bg, 5%);
+@btn-info-color: @black;
+@btn-info-bg: @brand-info;
+@btn-info-border: darken(@btn-info-bg, 5%);
+@btn-link-disabled-color: @gray-light;
+
+
+// Dropdowns
+@dropdown-bg: @black;
+@dropdown-border: @gray-dark;
+@dropdown-divider-bg: @gray-dark;
+@dropdown-link-active-color: @gray-lighter;
+@dropdown-link-active-bg: @component-active-bg;
+@dropdown-link-color: @white;
+@dropdown-link-hover-color: @gray-light;
+@dropdown-link-hover-bg: @dropdown-link-active-bg;
+@dropdown-link-disabled-color: @gray-light;
+@dropdown-header-color: @gray-light;
+@dropdown-caret-color: @gray-darker;
+
+
+// Forms
+@input-bg: @black;
+@input-bg-disabled: @gray-lighter;
+@input-color: @white;
+@input-border: @gray-light;
+@input-border-radius: @border-radius-base;
+@input-color-placeholder: @gray-light;
+@input-height-base: (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large: (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small: (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+@legend-color: @gray-dark;
+@legend-border-color: @gray-light;
+@input-group-addon-bg: @gray-lighter;
+@input-group-addon-border-color: @input-border;
+
+
+// Table
+@table-cell-padding: 6px;
+@table-condensed-cell-padding: 3px;
+@table-cell-padding: 8px;
+@table-condensed-cell-padding: 2px;
+@table-bg: transparent;
+@table-bg-accent: @black;
+@table-bg-hover: @black;
+@table-bg-active: @table-bg-hover;
+@table-border-color: @black;
+
+
+// Navbar
+@navbar-height: 50px;
+@navbar-margin-bottom: @line-height-computed;
+@navbar-default-color: @gray-light;
+@navbar-default-bg: @black;
+@navbar-default-border: darken(@navbar-default-bg, 6.5%);
+@navbar-border-radius: @border-radius-base;
+@navbar-padding-horizontal: floor(@grid-gutter-width / 2);
+@navbar-padding-vertical: ((@navbar-height - @line-height-computed) / 2);
+@navbar-default-link-color: @gray-light;
+@navbar-default-link-hover-color: @gray-darker;
+@navbar-default-link-hover-bg: @component-active-bg;
+@navbar-default-link-active-color:  @gray-dark;
+@navbar-default-link-active-bg: darken(@navbar-default-bg, 6.5%);
+@navbar-default-link-disabled-color:  @gray-light;
+@navbar-default-link-disabled-bg: transparent;
+@navbar-default-brand-color: @navbar-default-link-color;
+@navbar-default-brand-hover-color: darken(@navbar-default-link-color, 10%);
+@navbar-default-brand-hover-bg: @component-active-bg;
+@navbar-default-toggle-hover-bg: @gray-lighter;
+@navbar-default-toggle-icon-bar-bg: @gray;
+@navbar-default-toggle-border-color: @gray-lighter;
+
+
+// Navs Tabs
+@nav-link-padding: 8px 12px;
+@nav-link-hover-bg: @gray-lighter;
+@nav-disabled-link-color: @gray-light;
+@nav-disabled-link-hover-color: @gray-light;
+@nav-tabs-border-color: @gray-lighter;
+@nav-tabs-link-hover-border-color: @gray-lighter;
+@nav-tabs-active-link-hover-bg: @body-bg;
+@nav-tabs-active-link-hover-color: @gray;
+@nav-tabs-active-link-hover-border-color: @gray-lighter;
+@nav-tabs-justified-link-border-color: @gray-lighter;
+@nav-tabs-justified-active-link-border-color: @body-bg;
+@nav-pills-border-radius: @border-radius-base;
+@nav-pills-active-link-hover-bg: @component-active-bg;
+@nav-pills-active-link-hover-color: @black;
+
+
+// Jumbotron
+@jumbotron-padding: 30px;
+@jumbotron-color: inherit;
+@jumbotron-bg: @gray-lighter;
+@jumbotron-font-size: ceil((@font-size-base * 1.5));
+
+
+// Pagination
+@pagination-bg: @black;
+@pagination-border: @gray-lighter;
+@pagination-hover-bg: @gray-lighter;
+@pagination-hover-color: @link-hover-color;
+@pagination-hover-border: @gray-lighter;
+@pagination-active-bg: @brand-primary;
+@pagination-active-color: @black;
+@pagination-active-border: @brand-primary;
+@pagination-disabled-color: @gray-light;
+@pagination-disabled-bg: @black;
+@pagination-disabled-border: @gray-lighter;
+@pager-bg: @pagination-bg;
+@pager-border: @pagination-border;
+@pager-border-radius: 15px;
+@pager-hover-bg: @pagination-hover-bg;
+@pager-active-bg: @pagination-active-bg;
+@pager-active-color: @pagination-active-color;
+@pager-bg: @pagination-bg;
+@pager-disabled-color: @gray-light;
+
+
+// Form States
+@state-warning-text: #c09853;
+@state-warning-bg: #fcf8e3;
+@state-warning-border: darken(spin(@state-warning-bg, -10), 3%);
+@state-danger-text: #b94a48;
+@state-danger-bg: #f2dede;
+@state-danger-border: darken(spin(@state-danger-bg, -10), 3%);
+@state-success-text: #468847;
+@state-success-bg: #dff0d8;
+@state-success-border: darken(spin(@state-success-bg, -10), 5%);
+@state-info-text: #3a87ad;
+@state-info-bg: #d9edf7;
+@state-info-border: darken(spin(@state-info-bg, -10), 7%);
+
+
+// ToolTip
+@tooltip-max-width: 200px;
+@tooltip-color: @black;
+@tooltip-bg: @white;
+@tooltip-arrow-width: 5px;
+@tooltip-arrow-color: @tooltip-bg;
+@tooltip-opacity: .9;
+
+
+// Popover
+@popover-bg: @black;
+@popover-max-width: 276px;
+@popover-border-color: rgba(0,0,0,.2);
+@popover-fallback-border-color: @gray-light;
+@popover-title-bg: darken(@popover-bg, 3%);
+@popover-arrow-width: 10px;
+@popover-arrow-color: @black;
+@popover-arrow-outer-width: (@popover-arrow-width + 1);
+@popover-arrow-outer-color: rgba(0,0,0,.25);
+@popover-arrow-outer-fallback-color: @gray;
+
+
+// List Group
+@list-group-bg: @black;
+@list-group-border: @gray-lighter;
+@list-group-border-radius: @border-radius-base;
+@list-group-hover-bg: @black;
+@list-group-active-color: @black;
+@list-group-active-bg: @component-active-bg;
+@list-group-active-border: @list-group-active-bg;
+@list-group-active-text-color: lighten(@list-group-active-bg, 40%);
+@list-group-link-color: @gray-dark;
+@list-group-link-heading-color: @gray-darker;
+
+
+// Sprites
+@icon-font-path: '/fonts/';
+@icon-font-name: glyphicons-halflings-regular;
