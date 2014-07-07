@@ -1,2 +1,1 @@
-var foo = require('foo');
-console.log(foo);
+alert('Remove this js');

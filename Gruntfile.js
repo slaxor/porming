@@ -2,18 +2,18 @@
 module.exports = function(grunt) {
   grunt.initConfig({
     jade: {
-      options: {
-        data: function(dest, src) {
-          return {
-            from: src,
-            to: dest
-          };
-        }
-      },
-      dist: {
-        files: {
-          './result/index.html': './pages/index.jade'
-        }
+      compile: {
+        options: {
+          client: false,
+          pretty: true
+        },
+        files: [{
+          src: "**/*.jade",
+          dest: "./result/",
+          ext: ".html",
+          cwd: "./pages/",
+          expand: true
+        }]
       }
     },
 
