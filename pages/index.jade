@@ -6,5 +6,21 @@ html(lang="en")
     link(rel="stylesheet" href="/stylesheets/main.css")
   body
     .stage
-      h1.foo-title Foo
+      .em-box
+        h3 Foo
+        .em-box
+          h3 Foo
+          .em-box-1
+            p Foo
+            .em-box
+              h3 Foo
+              .em-box-2
+                h3 Foo
+
+  .super-semantic
+    .super-semantic__key.super-semantic__key--state-active fasel
+    .super-semantic__value.super-semantic__value--type-string blah
+    .super-semantic__key.super-semantic__key--state-inactive fasel
+    .super-semantic__value.super-semantic__value--type-integer 123
+
   script(type="text/javascript" src="/javascripts/main.js")

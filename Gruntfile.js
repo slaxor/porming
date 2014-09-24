@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           pretty: true
         },
         files: [{
-          src: "**/*.jade",
+          src: "./**/*.jade",
           dest: "./result/",
           ext: ".html",
           cwd: "./pages/",
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
     concat: {
       main: {
         files: {
-          './result/javascripts/main.js': './pages/javascripts/**/*.js'
+          './result/javascripts/main.js': ['./pages/javascripts/jquery-2.1.1.js', './pages/javascripts/**/*.js', './pages/javascripts/main.js']
         }
       }
     },
@@ -60,6 +60,7 @@ module.exports = function(grunt) {
         livereload: true
       }
     },
+
     parallel: {
       web: {
         options: {
@@ -73,6 +74,65 @@ module.exports = function(grunt) {
         args: ['express']
       }]
       }
+    },
+
+    sshconfig: {
+      host: '127.0.0.1',
+      username: 'slash',
+      agent: process.env.SSH_AUTH_SOCK,
+      privateKey: grunt.file.read(process.env.HOME + "/.ssh/id_dsa"),
+      srcPath: './result',
+      path: '/tmp/foobar',
+      showProgress: true
+    },
+    //sshconfig: grunt.file.readJSON('secret.json'),
+
+    sftp: {
+      copyfiles: {
+        files: [{
+          src: "**/*",
+          path: "/tmp/foobarbaz/",
+          cwd: "./result/",
+          expand: true
+        }],
+        //files: {
+          //"foobarbaz": "result/index.html"
+        //},
+        options: {
+          srcPath: '<%= sshconfig.srcPath %>',
+          path: '<%= sshconfig.path %>',
+          host: '<%= sshconfig.host %>',
+          username: '<%= sshconfig.username %>',
+          agent: '<%= sshconfig.agent %>',
+          privateKey: '<%= sshconfig.privateKey %>',
+          showProgress: true,
+          createDirectories: true
+        }
+      }
+    },
+    sshexec: {
+      prepare: {
+        command: 'mkdir -pv /tmp/foobarbaz',
+        options: {
+          path: '<%= sshconfig.path %>',
+          host: '<%= sshconfig.host %>',
+          username: '<%= sshconfig.username %>',
+          agent: '<%= sshconfig.agent %>',
+          privateKey: '<%= sshconfig.privateKey %>',
+          showProgress: true
+        }
+      },
+      postpare: {
+        command: 'ls -lAh /tmp/foobarbaz',
+        options: {
+          path: '<%= sshconfig.path %>',
+          host: '<%= sshconfig.host %>',
+          username: '<%= sshconfig.username %>',
+          agent: '<%= sshconfig.agent %>',
+          privateKey: '<%= sshconfig.privateKey %>',
+          showProgress: true
+        }
+      }
     }
   });
 
@@ -83,8 +143,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-parallel');
+  grunt.loadNpmTasks('grunt-ssh');
 
   grunt.registerTask('build', ['clean', 'jade', 'less', 'concat:main']);
+  grunt.registerTask('deploy', ['sshexec:prepare', 'sftp:copyfiles', 'sshexec:postpare']);
   grunt.registerTask('default', ['parallel:web']);
 };
 

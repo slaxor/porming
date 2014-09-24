@@ -1,0 +1,22 @@
+<h1>Porming</h1>
+<p>is basically a "Gruntfile" - with acompanying package.json, of course - that automatically compiles JADE and LESS files. The intended audience being "HTML-People" who don't need a web app, cms or anything, just good ol' static pages. The big advantage is that with LESS you're able to better structure your CSS. The same goes for JADE in respect to HTML.</p>
+<p>Another useful feature is the simple http server at port 3080 (changeable default) since sometimes file://-resources behave differently</p>
+<h2>Install</h2>
+<ol>
+<li>get node running on your dev machine. (It's not needed on the host)</li>
+<li><code>git clone git@github.com:slaxor/porming.git /path/to/your/project ; cd $_</code></li>
+<li><code>npm install</code></li>
+<li><code>npm install -g grunt-cli</code></li>
+<li>you're done :)</li>
+</ol>
+<h2>Usage</h2>
+<p>The suggested Workflow is as follows:</p>
+<ol>
+<li>start file watch and server: <code>grunt</code></li>
+<li>call <code>http://127.0.0.1:3080</code> in your favorite browser</li>
+<li>edit files in the <code>./pages</code> folder</li>
+<li>call <code>http://127.0.0.1:3080</code> again to see your changes.</li>
+<li>repeat from step 2 until you're happy</li>
+<li>push <code>./result/**</code> to your server</li>
+</ol>
+<p>_</p>
