@@ -1,26 +1,496 @@
 doctype html
-html(lang="en")
+html(lang='de')
   head
-    meta(charset="UTF-8")
-    title index page of foo
-    link(rel="stylesheet" href="/stylesheets/main.css")
-  body
-    .stage
-      .em-box
-        h3 Foo
-        .em-box
-          h3 Foo
-          .em-box-1
-            p Foo
-            .em-box
-              h3 Foo
-              .em-box-2
-                h3 Foo
-
-  .super-semantic
-    .super-semantic__key.super-semantic__key--state-active fasel
-    .super-semantic__value.super-semantic__value--type-string blah
-    .super-semantic__key.super-semantic__key--state-inactive fasel
-    .super-semantic__value.super-semantic__value--type-integer 123
-
-  script(type="text/javascript" src="/javascripts/main.js")
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Box Haare | Schanzenstra&szlig;e 63 und Altonaer Stra&szlig;e 5e | 20357 Hamburg
+    // Bootstrap Core CSS
+    link(href='assets/css/bootstrap/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // Retina.js - Load first for faster HQ mobile images.
+    script(src='assets/js/plugins/retina/retina.min.js')
+    // Font Awesome
+    link(href='assets/font-awesome/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+    // Default Fonts
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900', rel='stylesheet', type='text/css')
+    // Modern Style Fonts (Include these is you are using body.modern!)
+    link(href='http://fonts.googleapis.com/css?family=Montserrat:400,700', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700', rel='stylesheet', type='text/css')
+    // Vintage Style Fonts (Include these if you are using body.vintage!)
+    link(href='http://fonts.googleapis.com/css?family=Sanchez:400italic,400', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Cardo:400,400italic,700', rel='stylesheet', type='text/css')
+    // Plugin CSS
+    link(href='assets/css/plugins/owl-carousel/owl.carousel.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/plugins/owl-carousel/owl.theme.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/plugins/owl-carousel/owl.transitions.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/plugins/magnific-popup.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/plugins/jquery.fs.wallpaper.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/main.css', rel='stylesheet', type='text/css')
+    // IE8 support for HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js')
+  body#page-top
+    // Navigation
+    // Note: navbar-default and navbar-inverse are both supported with this theme.
+    nav.navbar.navbar-inverse.navbar-fixed-top.navbar-expanded
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#page-top')
+            img.img-responsive(src='assets/img/box-haare_logo_kl.png', alt='')
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#page-top') Start
+            li
+              a(href='#locations') L&auml;den | Preise
+            li
+              a(href='#team') Team
+            li
+              a(href='#collection') Bilder
+        // /.navbar-collapse
+      // /.container
+    // Instructions: Set your background image using the URL below.
+    header
+      .intro-content
+        img.img-responsive.img-centered(src='assets/img/box-haare_logo.png', alt='')
+        br
+        |             Schanzenstra&szlig;e 63 - 20357 Hamburg
+        br
+        | Telefon 040. 430 35 07
+        br
+        | und
+        br
+        | Altonaer Stra&szlig;e 5 - 20357 Hamburg
+        br
+        | Telefon 040. 431 793 84
+        br
+      .scroll-down
+        a.btn(href='#locations')
+          i.fa.fa-angle-down.fa-fw
+    section#locations.pricing
+      .container
+        .row.text-center
+          .col-lg-12
+            h2 L&auml;den | Preise
+            // <hr class="colored">
+            p
+            p
+              | Bitte keine Terminw&uuml;nsche oder Termin&auml;nderungen oder Terminabsagen per E-Mail. Die k&ouml;nnen wir nur telefonisch entgegennehmen.
+              br
+              | Oder kommt einfach im Laden vorbei.
+        .row.content-row
+          .col-md-4
+            .pricing-item
+              h3 Box Haare I
+              // <hr class="colored">
+              p
+                ul.list-group
+                  li.list-group-item
+                    em &Ouml;ffnungszeiten:
+                    br
+                    | Montags geschlossen!
+                    br
+                    |                                                             Dienstag und Mittwoch
+                    br
+                    | 10:00 &ndash; 19:00 Uhr
+                    br
+                    |                                                             Donnerstag
+                    br
+                    | 10:00 &ndash; 22:00 Uhr
+                    br
+                    |                                                             Freitag 10:00 &ndash; 22:00 Uhr
+                    br
+                    |                                                             Samstag 11:00 &ndash; 18:00 Uhr
+                  li.list-group-item
+                    em Telefon:
+                    br
+                    | 040. 430 35 07
+                  li.list-group-item
+                    em Adresse:
+                    br
+                    | Schanzenstra&szlig;e 63
+                    br
+                    | 20357 Hamburg
+                img(src='assets/img/box-haare1-static-map.png', width='278', height='388', usemap='#Map')
+                map(name='Map')
+                  area(shape='rect', coords='122,365,277,387', href='https://goo.gl/maps/kaYfl', target='_blank')
+          .col-md-4
+            .pricing-item
+              h3 Box Haare II
+              // <hr class="colored">
+              p
+                ul.list-group
+                  li.list-group-item
+                    em &Ouml;ffnungszeiten:
+                    br
+                    | Montags geschlossen!
+                    br
+                    |                                                             Dienstag und Mittwoch
+                    br
+                    | 10:00 &ndash; 19:00 Uhr
+                    br
+                    |                                                             Donnerstag
+                    br
+                    | 10:00 &ndash; 22:00 Uhr
+                    br
+                    |                                                             Freitag 12:30 &ndash; 22:00 Uhr
+                    br
+                    |                                                             Samstag 10:00 &ndash; 17:00 Uhr
+                  li.list-group-item
+                    em Telefon:
+                    br
+                    | 040. 431 793 84
+                  li.list-group-item
+                    em Adresse:
+                    br
+                    | Altonaer Stra&szlig;e 5
+                    br
+                    | 20357 Hamburg
+                iframe.animate3(src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d296.20545328736677!2d9.961620955210849!3d53.56412889654207!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe167b9536f2bf117!2sBox-Haare!5e0!3m2!1sde!2sde!4v1411739998450', data-animate='bounceInDown', width='100%', height='388px', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+          .col-md-4
+            .pricing-item
+              h3 Preise
+              // <hr class="colored">
+              p
+                ul.list-group
+                  li.list-group-item
+                    em Schneiden
+                    br
+                    | Frauen (Jungfriseur):
+                    br
+                    | 37,&ndash; &euro;
+                    br
+                    |                                                                               Frauen:
+                    br
+                    | 48,&ndash; &euro;
+                    br
+                    |                                                                               M&auml;nner (Jungfriseur):
+                    br
+                    | 32,&ndash; &euro;
+                    br
+                    |                                                                               M&auml;nner:
+                    br
+                    | 41,&ndash; &euro;
+                  li.list-group-item
+                    em F&auml;rben:
+                    br
+                    | 40,&ndash; &euro; bis 80,&ndash; &euro;
+                  li.list-group-item
+                    em Str&auml;hnen
+                    br
+                    | Oberkopf:
+                    br
+                    | 40,&ndash; &euro; bis 60,&ndash; &euro;
+                    br
+                    |                                                                             Ganzer Kopf:
+                    br
+                    | 80,&ndash; &euro; bis 120,&ndash; &euro;
+                  li.list-group-item
+                    em T&ouml;nen
+                    br
+                    | T&ouml;nung:
+                    br
+                    | 35,&ndash; &euro; bis 70,&ndash; &euro;
+                    br
+                    |                                                                           Wimpern:
+                    br
+                    | 13,&ndash; &euro;
+                    br
+                    |                                                                           Augenbrauen:
+                    br
+                    | 9,&ndash; &euro;
+                    br
+                    |                                                                           Zusammen:
+                    br
+                    | 18,&ndash; &euro;
+                  li.list-group-item
+                    em Dauerwelle:
+                    br
+                    | machen wir nicht
+                  li.list-group-item Jungfriseur = kein Azubi
+        br
+        .row.text-center
+          .col-lg-12
+            // <hr class="colored">
+            p
+            p
+              | Bei unseren Waschen-Schneiden-F&ouml;hnen-Preisen unterscheiden wir zwischen dem normalen- und dem Jungfriseur-Tarif. Jungfriseure sind unsere j&uuml;ngeren (aber fertig ausgebildeten) Kollegen, die etwas weniger Berufserfahrung haben und deshalb g&uuml;nstiger sind.
+    section#team.bg-gray
+      .container.text-center
+        .row
+          .col-lg-12
+            h2 Team
+            // <hr class="colored">
+            p
+            p Unsere Friseure in alphabetischer Reihenfolge.
+        .row.content-row
+          .col-lg-12
+            .about-carousel
+              .item
+                img.img-responsive(src='assets/img/team/Anne.jpg', alt='')
+                .caption
+                  //
+                    <h3>Patricia West</h3>
+                    <hr class="colored">
+                    <p>Owner &amp; Founder</p>
+                p Anne
+              .item
+                img.img-responsive(src='assets/img/team/Bastien.jpg', alt='')
+                .caption
+                  //
+                    <h3>Kate Williams</h3>
+                    <hr class="colored">
+                    <p>Head Fashion Buyer</p>
+                p Bastien
+              .item
+                img.img-responsive(src='assets/img/team/Brayen.jpg', alt='')
+                .caption
+                  //
+                    <h3>Howard Scott</h3>
+                    <hr class="colored">
+                    <p>Sales Manager</p>
+                p Brayen
+              .item
+                img.img-responsive(src='assets/img/team/Jenny.jpg', alt='')
+                .caption
+                  //
+                    <h3>Amy Vanderbute</h3>
+                    <hr class="colored">
+                    <p>Marketing Coordinator</p>
+                p Jenny
+              .item
+                img.img-responsive(src='assets/img/team/Julie.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Julie
+              .item
+                img.img-responsive(src='assets/img/team/Katrin.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Katrin
+              .item
+                img.img-responsive(src='assets/img/team/Kristin.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Kristin
+              .item
+                img.img-responsive(src='assets/img/team/Lotti.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Lotti
+              .item
+                img.img-responsive(src='assets/img/team/Mimi.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Mimi
+              .item
+                img.img-responsive(src='assets/img/team/Mo.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Mo
+              .item
+                img.img-responsive(src='assets/img/team/Nadja.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Nadja
+              .item
+                img.img-responsive(src='assets/img/team/Nancy.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Nancy
+              .item
+                img.img-responsive(src='assets/img/team/Pascal.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Pascal
+              .item
+                img.img-responsive(src='assets/img/team/Peter.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Peter * 27.04.1962 &ndash; &#x271D; 25.02.2013
+              .item
+                img.img-responsive(src='assets/img/team/Sandra.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Sandra
+              .item
+                img.img-responsive(src='assets/img/team/Stephan.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Stephan
+              .item
+                img.img-responsive(src='assets/img/team/Thorsten.jpg', alt='')
+                .caption
+                  //
+                    <h3>Jeremy Davidson</h3>
+                    <hr class="colored">
+                    <p>Style Expert</p>
+                p Thorsten
+    section#collection.bg-gray
+      .container
+        .row.text-center
+          .col-lg-12
+            h2 Bilder
+            // <hr class="colored">
+            p
+            p Hier einige unserer Bilder.
+        .row.content-row
+          .col-lg-12
+            .portfolio-gallery
+              .item
+                a.gallery-link(href='assets/img/gallery5/22.jpg', title='Oktober 2011')
+                  img.img-responsive.img-centered(src='assets/img/gallery5/22-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery5/23.jpg', title='Oktober 2011')
+                  img.img-responsive.img-centered(src='assets/img/gallery5/23-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery4/14.jpg', title='Kristin – Dezember 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery4/14-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery4/15.jpg', title='Kristin und Marcel – Dezember 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery4/15-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery4/16.jpg', title='Kristin und Marcel – Dezember 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery4/16-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery4/17.jpg', title='Kristin und Marcel – Dezember 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery4/17-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery4/18.jpg', title='Kristin – Dezember 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery4/18-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery3/13.jpg', title='Bastien – Juli 2008')
+                  img.img-responsive.img-centered(src='assets/img/gallery3/13-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/5.jpg', title='Lina und Christian – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/5-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/6.jpg', title='Lina und Christian – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/6-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/7.jpg', title='Lina – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/7-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/8.jpg', title='Lotti und Marcel – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/8-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/9.jpg', title='Lotti und Marcel – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/9-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/10.jpg', title='Marcel – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/10-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/11.jpg', title='Marcel – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/11-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery2/12.jpg', title='Lotti – Oktober 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery2/12-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery1/1.jpg', title='Marcel – Februar 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery1/1-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery1/2.jpg', title='Kristin – Februar 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery1/2-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery1/3.jpg', title='Lotti – Februar 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery1/3-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery1/4.jpg', title='Lotti – Februar 2005')
+                  img.img-responsive.img-centered(src='assets/img/gallery1/4-kl.jpg', alt='')
+    section#collection.bg-gray
+      .container
+        .row.text-center
+          .col-lg-12
+            h2 Die Anf&auml;nge
+            // <hr class="colored">
+            p
+            p
+              | Box Haare &ndash; Schanzenstra&szlig;e 46 (1992&ndash;1997) und Dammtorstra&szlig;e 29 (1995&ndash;1997) zusammen mit dem Mojo-Shop.
+        .row.content-row
+          .col-lg-12
+            .portfolio-gallery
+              .item
+                a.gallery-link(href='assets/img/gallery6/1.jpg', title='Schanzenstraße 46 – 1992–1997 – zusammen mit Mojo-Shop')
+                  img.img-responsive.img-centered(src='assets/img/gallery6/1-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery6/2.jpg', title='Schanzenstraße 46 – 1992–1997 – zusammen mit Mojo-Shop')
+                  img.img-responsive.img-centered(src='assets/img/gallery6/2-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery6/24.jpg', title='Schanzenstraße 46 – 1992–1997 – zusammen mit Mojo-Shop')
+                  img.img-responsive.img-centered(src='assets/img/gallery6/24-kl.jpg', alt='')
+              .item
+                a.gallery-link(href='assets/img/gallery6/3.jpg', title='Dammtorstraße 29 – 1995–1997 – zusammen mit Mojo-Shop')
+                  img.img-responsive.img-centered(src='assets/img/gallery6/3-kl.jpg', alt='')
+    a.btn.btn-block.btn-full-width(href='#') Box Haare | 2014
+    footer.footer
+      .container.text-center
+        .bg-gray
+          .col-md-4.contact-details
+            h4
+              i.fa.fa-envelope
+              |  Email
+            p
+              a(href='mailto:info@box-haare.de') info@box-haare.de
+        .row.copyright
+          .col-lg-12
+            p.small Box Haare | 2014 | Impressum
+    // Core Scripts
+    script(src='assets/js/jquery-1.10.2.js')
+    script(src='assets/js/bootstrap/bootstrap.min.js')
+    // Plugin Scripts
+    script(src='assets/js/plugins/jquery.easing.min.js')
+    script(src='assets/js/plugins/classie.js')
+    script(src='assets/js/plugins/cbpAnimatedHeader.js')
+    script(src='assets/js/plugins/owl-carousel/owl.carousel.js')
+    script(src='assets/js/plugins/jquery.magnific-popup/jquery.magnific-popup.min.js')
+    script(src='assets/js/plugins/jquery.fs.wallpaper.js')
+    script(src='assets/js/contact_me.js')
+    script(src='assets/js/plugins/jqBootstrapValidation.js')
+    // Vitality Theme Scripts
+    script(src='assets/js/vitality.js')

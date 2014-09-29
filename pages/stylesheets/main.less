@@ -1,59 +1,8 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/mixins';
-@import 'theme';
+@import 'theme/vitality';
 
-.stage {
-  .container-fluid();
-  background-color: #ff7;
+body {
+	background: #666;
+	
 }
-
-.foo-title {
-  .btn();
-  .btn-primary();
-}
-
-.em-box {
-  width: 5em;
-  background-color: #6f6f6f;
-}
-
-.em-box-1 {
-  width: 2.5em;
-  background-color: #9f6f6f;
-}
-
-.em-box-2 {
-  font-size: 1.5em;
-  width: 3.75em;
-  background-color: #6f6f9f;
-}
-
-
-._my-12-grid {
-  .make-md-column(12);
-}
-
-// http://bem.info/method/definitions/
-.super-semantic {
-  &:extend(._my-12-grid);
-}
-
-.super-semantic__key {
-  .make-md-column(6);
-  background-color: #6f6f9f;
-}
-
-.super-semantic__key--state-active {
-  color: red;
-}
-
-.super-semantic__key--state-inactive {
-  color: #cccccc;
-}
-
-.super-semantic__value {
-  .make-md-column(6);
-  background-color: #6f9f6f;
-}
-
-

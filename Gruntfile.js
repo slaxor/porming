@@ -1,4 +1,5 @@
 'use strict';
+
 module.exports = function(grunt) {
   grunt.initConfig({
     jade: {
@@ -36,7 +37,20 @@ module.exports = function(grunt) {
       }
     },
 
-    clean: ['./result/**/*.{html,css,js}'],
+    copy: {
+      assets: {
+        files: [
+          {
+	    expand: true,
+	    cwd: './pages/assets/',
+	    src: ['**'],
+	    dest: './result/assets/'
+	  },
+        ]
+      }
+    },
+    
+    clean: ['./result/**/*.{html,css,js}', './result/assets/**'],
 
     express: {
         server: {
@@ -144,8 +158,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-express-server');
   grunt.loadNpmTasks('grunt-parallel');
   grunt.loadNpmTasks('grunt-ssh');
-
-  grunt.registerTask('build', ['clean', 'jade', 'less', 'concat:main']);
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  
+  grunt.registerTask('build', ['clean', 'jade', 'less', 'concat:main', 'copy']);
   grunt.registerTask('deploy', ['sshexec:prepare', 'sftp:copyfiles', 'sshexec:postpare']);
   grunt.registerTask('default', ['parallel:web']);
 };
